@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord Products - BloodCore</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* GLOBAL ANIMATION */
+* {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(10px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #4b0000, #800000);
+    padding: 30px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    animation: glowRed 2s infinite alternate;
+}
+
+/* NAV */
+nav {
+    background: #1a1a1a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #4b0000;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* GRID */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* CARD */
+.product {
+    background: linear-gradient(145deg, #4b0000, #800000);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #800000;
+}
+
+.product h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    animation: glowRed 2s infinite alternate;
+}
+
+.in-stock {
+    color: #00ff88;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: glowGreen 1.5s infinite alternate;
+}
+
+.price {
+    text-decoration: line-through;
+    color: #ffaaaa;
+}
+
+.new-price {
+    color: #ffd700;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+    animation: glowGold 1.5s infinite alternate;
+}
+
+/* BUTTON */
+.buy-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #800000;
+    background: #0b0b0b;
+    color: #ff2e2e;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #800000;
+    color: #fff;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* GLOW */
+@keyframes glowRed {
+    from { text-shadow: 0 0 5px #ff0000; }
+    to { text-shadow: 0 0 20px #ff0000; }
+}
+
+@keyframes glowGreen {
+    from { text-shadow: 0 0 5px #00ff88; }
+    to { text-shadow: 0 0 20px #00ff88; }
+}
+
+@keyframes glowGold {
+    from { text-shadow: 0 0 5px #ffd700; }
+    to { text-shadow: 0 0 25px #ffd700; }
+}
+
+/* FOOTER */
+footer {
+    background:#1a1a1a;
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+}
+</style>
+
+</head>
+<body>
+
+<header>💎 Discord Products</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="payment.html">Payment Methods</a>
+    <a href="support.html">Support</a>
+    <a href="checkout.html">Checkout</a>
+</nav>
+
+<main>
+
+<!-- Nitro IDs -->
+<div class="product">
+    <h2>Discord Nitro IDs</h2>
+    <p class="in-stock">✔ In Stock</p>
+    <p><span class="price">$8.00</span><span class="new-price">$3.50</span></p>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<!-- Nitro Deals -->
+<div class="product">
+    <h2>Nitro Deals</h2>
+    <p class="in-stock">✔ In Stock</p>
+    <p><span class="price">$12.00</span><span class="new-price">$5.99</span></p>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<!-- OWO -->
+<div class="product">
+    <h2>OwO</h2>
+    <p class="in-stock">✔ In Stock</p>
+    <p><span class="price">$6.00</span><span class="new-price">$2.50</span></p>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<!-- Promo Links -->
+<div class="product">
+    <h2>Discord Promo Links</h2>
+    <p class="in-stock">✔ In Stock</p>
+    <p><span class="price">$4.00</span><span class="new-price">$1.50</span></p>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<!-- Decorations -->
+<div class="product">
+    <h2>Random Decorations</h2>
+    <p class="in-stock">✔ In Stock</p>
+    <p><span class="price">$5.00</span><span class="new-price">$2.00</span></p>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+</main>
+
+<footer>
+    &copy; 2026 BloodCore Store. All Rights Reserved.
+</footer>
+
+<script>
+function buyNow() {
+    alert("Make a ticket in Discord for buying!");
+    window.location.href = "https://discord.gg/S3qQHVmH";
+}
+</script>
+
+</body>
+</html>

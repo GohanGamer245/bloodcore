@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BloodCore</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    color:#fff;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+    background: #0b0b0b; /* base dark color like Services page */
+}
+
+/* Background Red Animation */
+body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: radial-gradient(circle at 20% 30%, rgba(255,0,0,0.2), transparent 50%), 
+                radial-gradient(circle at 80% 70%, rgba(255,50,50,0.15), transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+    animation: moveBG 15s linear infinite, pulseBG 4s ease-in-out infinite alternate;
+}
+
+@keyframes moveBG {
+    0% { background-position: 0% 0%, 100% 100%; }
+    50% { background-position: 20% 30%, 80% 70%; }
+    100% { background-position: 0% 0%, 100% 100%; }
+}
+
+@keyframes pulseBG {
+    0% { opacity:0.4; }
+    50% { opacity:0.6; }
+    100% { opacity:0.4; }
+}
+
+/* Animations */
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+
+/* Header */
+header {
+    background:linear-gradient(90deg,#8b0000,#000);
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+    animation: slideUp 1s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar */
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#111;
+    padding:10px;
+    flex-wrap:wrap;
+    animation: slideUp 1.2s ease;
+    position: relative;
+    z-index: 1;
+}
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+    transition:0.3s;
+}
+nav a:hover {
+    color:#ff2e2e;
+    transform:translateY(-2px);
+}
+
+.nav-right {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.nav-right select, .nav-right button, .nav-right input {
+    padding:6px 10px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+.nav-right button:hover {
+    background:#ff2e2e;
+    color:#fff;
+}
+
+/* Hero */
+.hero {
+    text-align:center;
+    padding:80px 20px;
+    animation: slideUp 1.4s ease;
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size:42px;
+    color:#ff2e2e;
+}
+.hero p {
+    color:#ccc;
+    max-width:600px;
+    margin:auto;
+}
+
+.buttons {
+    margin-top:25px;
+}
+.btn {
+    background:#8b0000;
+    padding:12px 20px;
+    margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+.btn:hover {
+    background:#ff2e2e;
+    transform:scale(1.05);
+}
+
+/* Features */
+.features {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:40px;
+    text-align:center;
+    position: relative;
+    z-index: 1;
+}
+.feature {
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #8b0000;
+    transition:0.3s;
+    animation: slideUp 1.6s ease;
+}
+.feature:hover {
+    transform:translateY(-8px) scale(1.03);
+    border-color:#ff2e2e;
+}
+
+/* Footer */
+footer {
+    margin-top:40px;
+    padding:30px;
+    background:#000;
+    color:#aaa;
+    animation: fadeIn 2s ease;
+    position: relative;
+    z-index: 1;
+}
+.footer-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.footer-title {
+    color:#ff2e2e;
+    margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>🩸 BloodCore</header>
+
+<nav>
+    <div>
+        <a href="#">Home</a>
+        <a href="services.html">Shop</a>
+        <a href="support.html">Support</a>
+        <a href="payment.html">Payment Methods</a>
+    </div>
+
+    <div class="nav-right" id="userNav"></div>
+</nav>
+
+<section class="hero">
+    <h1 id="heroTitle">Welcome to the <br> Future of Shopping.</h1>
+    <p id="heroText">Discover a curated selection of products designed to elevate your daily life.</p>
+
+    <div class="buttons">
+        <a href="services.html" class="btn" id="exploreBtn">Explore Products</a>
+        <p>
+            <a href="#" class="btn" id="communityBtn">Join Our Community</a>
+        </p>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature" id="feature1">⚡ Instant Delivery</div>
+    <div class="feature" id="feature2">🔒 Secure Payments</div>
+    <div class="feature" id="feature3">🕒 24/7 Support</div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-title">BloodCore</div>
+            <p>Best Shop Ever 24/7 Support Instant Delivery!</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Load user nav
+function loadUserNav(){
+    const user = JSON.parse(localStorage.getItem('bloodcoreUser'));
+    const nav = document.getElementById('userNav');
+
+    if(user){
+        nav.innerHTML = `
+            <span style="color:#ff2e2e; font-weight:bold;">${user.username}</span>
+            <select id="langSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ur">Urdu</option>
+                <option value="hi">Hindi</option>
+                <option value="fr">French</option>
+                <option value="ru">Russian</option>
+            </select>
+            <button onclick="logout()">Logout</button>
+        `;
+    } else {
+        nav.innerHTML = `
+            <input type="text" id="loginUsername" placeholder="Username">
+            <button onclick="loginUser()">Login</button>
+        `;
+    }
+}
+
+// Login
+function loginUser(){
+    const username = document.getElementById('loginUsername').value.trim();
+    if(!username){ alert("Enter username!"); return; }
+    localStorage.setItem('bloodcoreUser', JSON.stringify({username}));
+    loadUserNav();
+}
+
+// Logout
+function logout(){
+    localStorage.removeItem('bloodcoreUser');
+    loadUserNav();
+}
+
+// Translations
+const translations = {
+    en: {
+        heroTitle:"Welcome to the <br> Future of Shopping.",
+        heroText:"Discover a curated selection of products designed to elevate your daily life.",
+        exploreBtn:"Explore Products",
+        communityBtn:"Join Our Community",
+        feature1:"⚡ Instant Delivery",
+        feature2:"🔒 Secure Payments",
+        feature3:"🕒 24/7 Support"
+    },
+    ur: {
+        heroTitle:"خریداری کے مستقبل میں خوش آمدید۔",
+        heroText:"اعلیٰ معیار کی مصنوعات دریافت کریں۔",
+        exploreBtn:"مصنوعات دیکھیں",
+        communityBtn:"کمیونٹی میں شامل ہوں",
+        feature1:"⚡ فوری ترسیل",
+        feature2:"🔒 محفوظ ادائیگیاں",
+        feature3:"🕒 24/7 سپورٹ"
+    },
+    hi: {
+        heroTitle:"खरीदारी के भविष्य में आपका स्वागत है",
+        heroText:"बेहतरीन प्रोडक्ट्स खोजें और आज ही खरीदें।",
+        exploreBtn:"प्रोडक्ट्स देखें",
+        communityBtn:"कम्युनिटी जॉइन करें",
+        feature1:"⚡ तुरंत डिलीवरी",
+        feature2:"🔒 सुरक्षित भुगतान",
+        feature3:"🕒 24/7 सपोर्ट"
+    },
+    fr: {
+        heroTitle:"Bienvenue dans le futur du shopping",
+        heroText:"Découvrez une sélection de produits premium.",
+        exploreBtn:"Voir les produits",
+        communityBtn:"Rejoindre la communauté",
+        feature1:"⚡ Livraison instantanée",
+        feature2:"🔒 Paiements sécurisés",
+        feature3:"🕒 Support 24/7"
+    },
+    ru: {
+        heroTitle:"Добро пожаловать в будущее покупок",
+        heroText:"Откройте для себя лучшие товары прямо сейчас.",
+        exploreBtn:"Смотреть товары",
+        communityBtn:"Присоединиться",
+        feature1:"⚡ Мгновенная доставка",
+        feature2:"🔒 Безопасные платежи",
+        feature3:"🕒 Поддержка 24/7"
+    }
+};
+
+// Change language
+function changeLanguage(){
+    const lang = document.getElementById('langSelect').value;
+
+    document.getElementById('heroTitle').innerHTML = translations[lang].heroTitle;
+    document.getElementById('heroText').innerHTML = translations[lang].heroText;
+    document.getElementById('exploreBtn').innerHTML = translations[lang].exploreBtn;
+    document.getElementById('communityBtn').innerHTML = translations[lang].communityBtn;
+    document.getElementById('feature1').innerHTML = translations[lang].feature1;
+    document.getElementById('feature2').innerHTML = translations[lang].feature2;
+    document.getElementById('feature3').innerHTML = translations[lang].feature3;
+}
+
+window.onload = loadUserNav;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media - BloodCore</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* GLOBAL FADE-IN */
+* {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #4b0000, #800000);
+    padding: 30px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    animation: glowRed 2s infinite alternate;
+}
+
+/* NAVBAR */
+nav {
+    background: #1a1a1a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #4b0000;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* MAIN */
+main {
+    padding: 50px;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff2e2e;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #4b0000, #800000);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #800000;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* PRICE */
+.price {
+    text-decoration: line-through;
+    color: #ff9900;
+    font-size: 18px;
+}
+
+.new-price {
+    color: #ff9900;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* BUTTON */
+.buy-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #0b0b0b;
+    color: #ff2e2e;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #800000;
+    color: white;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* FOOTER */
+footer {
+    background:#1a1a1a;
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    margin-top: 50px;
+}
+
+/* GLOW */
+@keyframes glowRed {
+    from { text-shadow: 0 0 5px #ff0000; }
+    to { text-shadow: 0 0 20px #ff0000; }
+}
+</style>
+
+</head>
+<body>
+
+<header>📱 Social Media / Premium</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="payment.html">Payment Methods</a>
+    <a href="support.html">Support</a>
+</nav>
+
+<main>
+
+<div class="title">🔥 Premium Subscriptions</div>
+
+<div class="grid">
+
+<div class="card">
+    <h3>ChatGPT+</h3>
+    <span class="price">$50</span>
+    <span class="new-price">$25</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>YouTube Premium</h3>
+    <span class="price">X</span>
+    <span class="new-price">X</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>Spotify Premium</h3>
+    <span class="price">X</span>
+    <span class="new-price">X</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>Proton VPN</h3>
+    <span class="price">X</span>
+    <span class="new-price">X</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>Crunchyroll Premium</h3>
+    <span class="price">$8</span>
+    <span class="new-price">$3</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+    &copy; 2026 BloodCore Store. All Rights Reserved.
+</footer>
+
+<script>
+function buyNow() {
+    alert("Make a ticket in Discord for buying!");
+    window.location.href = "https://discord.gg/S3qQHVmH";
+}
+</script>
+
+</body>
+</html>

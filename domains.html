@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domain Store - BloodCore</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* GLOBAL FADE-IN */
+* {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #4b0000, #800000);
+    padding: 30px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    animation: glowRed 2s infinite alternate;
+}
+
+/* NAVBAR */
+nav {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #4b0000;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* MAIN */
+main {
+    padding: 50px;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff2e2e;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #4b0000, #800000);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #800000;
+}
+
+/* CARD TITLE */
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* PRICE */
+.price {
+    text-decoration: line-through;
+    color: #ff9900;
+    font-size: 18px;
+}
+
+.new-price {
+    color: #ff9900;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* BUTTON */
+.buy-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #0b0b0b;
+    color: #ff2e2e;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #800000;
+    color: white;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* FEATURES */
+.features {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.features h2 {
+    color: #ff2e2e;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* FOOTER */
+footer {
+    background:#1a1a1a;
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    margin-top: 50px;
+}
+
+/* GLOW */
+@keyframes glowRed {
+    from { text-shadow: 0 0 5px #ff0000; }
+    to { text-shadow: 0 0 20px #ff0000; }
+}
+</style>
+
+</head>
+<body>
+
+<header>🌐 BloodCore Domains | Website</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="payment.html">Payment Methods</a>
+    <a href="support.html">Support</a>
+    <a href="checkout.html">Checkout</a>
+</nav>
+
+<main>
+
+<div class="title">🔥 Affordable & Premium Domain Deals</div>
+
+<div class="grid">
+
+<!-- WEBSITE CARD (ADDED) -->
+<div class="card">
+    <h3>Custom Website</h3>
+    <span class="price">$50.00</span>
+    <span class="new-price">$25 / 7000 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.fun</h3>
+    <span class="price">$5.00</span>
+    <span class="new-price">$2.5 / 800 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.xyz</h3>
+    <span class="price">$7.00</span>
+    <span class="new-price">$4 / 1200 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.org</h3>
+    <span class="price">$12.00</span>
+    <span class="new-price">$9 / 2499 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.online</h3>
+    <span class="price">$6.00</span>
+    <span class="new-price">$3 / 899 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.net</h3>
+    <span class="price">$18.00</span>
+    <span class="new-price">$14 / 3999 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.shop</h3>
+    <span class="price">$6.00</span>
+    <span class="new-price">$3 / 899 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.site</h3>
+    <span class="price">$4.00</span>
+    <span class="new-price">$2 / 600 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+<div class="card">
+    <h3>.host</h3>
+    <span class="price">$7.00</span>
+    <span class="new-price">$4 / 1199 PKR</span>
+    <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</div>
+
+</div>
+
+<div class="features">
+    <h2>🕷️ What Features Do You Get?</h2>
+    <p>✔ 1-Year Validity</p>
+    <p>✔ Full DNS Access</p>
+    <p>✔ Fast Setup</p>
+    <p>✔ Ongoing Support</p>
+
+    <p style="margin-top:20px; color:#ff2e2e; font-weight:bold;">
+        🛒 Create Ticket To Buy Now
+    </p>
+</div>
+
+</main>
+
+<footer>
+    &copy; 2026 BloodCore Store. All Rights Reserved.
+</footer>
+
+<script>
+function buyNow() {
+    alert("Make a ticket in Discord for buying!");
+    window.location.href = "https://discord.gg/S3qQHVmH";
+}
+</script>
+
+</body>
+</html>
